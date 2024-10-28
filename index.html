@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restauración de valor</title>
+    <link rel="stylesheet" href="css\Restauracion de valor.css">
+    <link rel="shortcut icon" href="img/ICONOS/6_1.ico" type="image/x-icon">
+    <!-- git add . - git commit -m "Actualizacion" - git pusg origin main -->
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-bg"));
+        if ("IntersectionObserver" in window) {
+        let lazyBgObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.style.backgroundImage = 
+                "linear-gradient(#0000, #000), url('" + entry.target.dataset.bg + "')";
+                entry.target.classList.remove("lazy-bg");
+                lazyBgObserver.unobserve(entry.target);
+            }
+            });
+        });
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBgObserver.observe(lazyBackground);
+        });
+        }
+    });
+
+    </script>
+    
+<body>
+    <header class="layaout" id="Inicio">
+
+        <div class="layaout__header"></div>
+        <div class="layaout__div">
+
+            <div class="content">
+                <div class="separador">
+                    <h1 class="titulo_Principal">Bienvenido a la Web Oficial</h1>
+                    <img src="img/logos sin fondo2 nuevos/6.png" alt="Logo" class="imagen_principal">
+                    <p class="texto_bienvenida">La web fue diseñada para mostrar en detalle todos los equipos que se reparan, informacion  de contacto y otros servicios que ofrece esta marca personal. <br> Disponible solo en Caracas, Venezuela.</p>
+                </div>
+
+                <div class="gif">
+                    <p style="color: rgba(255, 255, 255, 0.664 );" class="text__gif">Deslice hacia abajo</p>
+                    <img src="img/abajo.gif" alt="Deslizar hacia abajo" title="Deslice hacia abajo" class="layaout__gif">
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    
+    <header class="header">
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__logo-container">
+            <img class="header__logo" src="img/ICONOS/6_1.ico" >
+            <p class="header__text">BEACON CELL REPAIRS</p>
+        </div>
+        <nav class="nav, header__nav">
+            <ul class="lista, header__nav-list">
+                <a href="#Inicio"><li class="Inicio, header__nav-item">Inicio</li></a>
+                <a href="#Nosotros"><li class="Nosotros, header__nav-item">Nosotros</li></a>
+                <a href="#Dispositivos"><li class="Dispositivos, header__nav-item">Dispositivos</li></a>
+                <a href="#Mision"><li class="Mision, header__nav-item">Mision</li></a>
+                <a href="#Vision"><li class="Vision, header__nav-item">Vision</li></a>
+            </ul>
+        </nav>
+    </header>
+    <Main class="info" id="Nosotros">
+        <!-- Contenido de la web completa -->
+            <div class="info__wrapper">
+                <div class="info__img-container">
+                    <img src="img/nosotros2.jpg" class="info__img" alt="">
+                </div>
+                <div class="info__data-container">
+                    <div class="info__data">
+                        <div class="info__description" >
+                            <h3 class="nosotros">¿Quienes somos nosotros?</h3>
+                            <br><br>
+                            <p>
+                                Somos una marca personal dedicada al estudio de la electronica, asi como tambien en el campo de la informatica, esto nos permite con gran facilidad  reparar y mantener cualquier tipo de equipo, asi como tambien ofrecer servicios de reparacion y  mantenimiento de equipos de computo.  <br> <br> Nuestra empresa se enfoca en brindar servicios de alta calidad  y confiabilidad,  ofreciendo soluciones personalizadas para cada cliente, con un en foque en la satisfaccion del cliente. <br><br> <a href="https://wa.me/message/IYFFVJZJFHDHL1" class="ws" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consulta cualquier duda ahora por Whatsapp.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </Main>
+    <section class="dispositivos" id="Dispositivos">
+        <h2 class="dispositivos__title">Dispositivos que Reparamos</h2>
+        <div class="dispositivos__project-container">
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/Samsung.png"><h2 class="dispositivos__project-item">Samsung</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/realme.png"><h2 class="dispositivos__project-item">Realme</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/poco.png"><h2 class="dispositivos__project-item">Poco</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/xiaomi.png"><h2 class="dispositivos__project-item">Xiaomi</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/oppo.png"><h2 class="dispositivos__project-item">Oppo</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/honor.png"><h2 class="dispositivos__project-item">Honnor</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/oneplus.png"><h2 class="dispositivos__project-item">Oneplus</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/motorola.png"><h2 class="dispositivos__project-item">Motorola</h2></div>
+            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/huawei.png"><h2 class="dispositivos__project-item" >Huawei</h2></div>
+        </div>
+        <h4 class="dispositivos__subtitle" id="Mision">Pronto estaran disponibles las listas. Tenga paciencia.</h4>
+    </section>
+    <section class="mision__vision" id="Vision">
+        <div class="mision__vision__separator">
+            <div class="mision__vision__item" >
+                <h2 class="mision__vision__title">Mision</h2>
+                <p class="mision__vision__text">
+                    Nuestra misión  es brindar servicios de reparacion y mantenimiento de equipos de computo  y otros dispositivos electronicos, con la mayor calidad y confiabilidad, asi como tambien  ofrecer  soluciones personalizadas para cada cliente, con un enfoque en la satisfaccion del cliente
+                </p>
+            </div>
+            <div class="mision__vision__item" >
+                <h2 class="mision__vision__title" >Vision</h2>
+                <p class="mision__vision__text">
+                    Nuestra vision es ser la marca de reparacion y mantenimiento de equipos de computo  y otros dispositivos electronicos, mas grande y confiable de  la region, asi como tambien  ser  reconocida por su calidad y confiabilidad,  asi como tambien por su compromiso con la satisfaccion del cliente.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#Inicio">
+                <img src="img/ICONOS/6_1.ico" alt="Logo" class="logo__footer">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>Ubicación</h2>
+            <p class="text-final">No somos tienda fisica, estamos disponibles por el Mun. Libertador en Caracas, Venezuela <br><br> ______________________________ <br><br><br>Terminos y Condiciones - Politicas de seguridad
+        </div>
+        <div class="box">
+            <h2>Escribenos por acá</h2>
+            <div class="red-social">
+                <a href="https://wa.me/message/IYFFVJZJFHDHL1"><i class="fa-brands fa-whatsapp" target="_blank"></i></a>
+                <a href="https://www.instagram.com/antwhony_f?igsh=MThyamY1MHNjMnduNg==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p> 
+                <br><br> 
+                Redes
+                <br><br>
+                <a href="https://www.instagram.com/antwhony_f?igsh=MThyamY1MHNjMnduNg==" target="_blank" class="redes2" >
+                    <i class="fa-brands fa-instagram redes2">
+                        Anthony
+                    </i> 
+                </a>
+                <br><br>
+                <a href="" class="redes2"><i class="fa-brands fa-instagram redes2" target="_blank"> Salomon</i> </a> 
+                <br><br>
+                <a href="" class="redes2"><i class="fa-brands fa-instagram redes2" target="_blank"> Enmanuel</i> </a> 
+        </div>
+    </div>
+</footer>
+</html>
