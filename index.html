@@ -12,28 +12,6 @@
     <link rel="shortcut icon" href="img/ICONOS/6_1.ico" type="image/x-icon">
     <!-- git add . - git commit -m "Actualizacion" - git pusg origin main -->
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-bg"));
-        if ("IntersectionObserver" in window) {
-        let lazyBgObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.style.backgroundImage = 
-                "linear-gradient(#0000, #000), url('" + entry.target.dataset.bg + "')";
-                entry.target.classList.remove("lazy-bg");
-                lazyBgObserver.unobserve(entry.target);
-            }
-            });
-        });
-        lazyBackgrounds.forEach(function(lazyBackground) {
-            lazyBgObserver.observe(lazyBackground);
-        });
-        }
-    });
-
-    </script>
-    
 <body>
     <header class="layaout" id="Inicio">
 
@@ -96,15 +74,15 @@
     <section class="dispositivos" id="Dispositivos">
         <h2 class="dispositivos__title">Dispositivos que Reparamos</h2>
         <div class="dispositivos__project-container">
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/Samsung.png"><h2 class="dispositivos__project-item">Samsung</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/realme.png"><h2 class="dispositivos__project-item">Realme</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/poco.png"><h2 class="dispositivos__project-item">Poco</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/xiaomi.png"><h2 class="dispositivos__project-item">Xiaomi</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/oppo.png"><h2 class="dispositivos__project-item">Oppo</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/honor.png"><h2 class="dispositivos__project-item">Honnor</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/oneplus.png"><h2 class="dispositivos__project-item">Oneplus</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/motorola.png"><h2 class="dispositivos__project-item">Motorola</h2></div>
-            <div class="dispositivos__project lazy-bg" data-bg="img/Dispositivos/huawei.png"><h2 class="dispositivos__project-item" >Huawei</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Samsung</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Realme</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Poco</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Xiaomi</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Oppo</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Honnor</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Oneplus</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item">Motorola</h2></div>
+            <div class="dispositivos__project"><h2 class="dispositivos__project-item" >Huawei</h2></div>
         </div>
         <h4 class="dispositivos__subtitle" id="Mision">Pronto estaran disponibles las listas. Tenga paciencia.</h4>
     </section>
@@ -135,11 +113,11 @@
             </figure>
         </div>
         <div class="box">
-            <h2>Ubicación</h2>
+            <h2 class="box-title">Ubicación</h2>
             <p class="text-final">No somos tienda fisica, estamos disponibles por el Mun. Libertador en Caracas, Venezuela <br><br> ______________________________ <br><br><br>Terminos y Condiciones - Politicas de seguridad
         </div>
         <div class="box">
-            <h2>Escribenos por acá</h2>
+            <h2 class="box-title">Escribenos por acá</h2>
             <div class="red-social">
                 <a href="https://wa.me/message/IYFFVJZJFHDHL1"><i class="fa-brands fa-whatsapp" target="_blank"></i></a>
                 <a href="https://www.instagram.com/antwhony_f?igsh=MThyamY1MHNjMnduNg==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
